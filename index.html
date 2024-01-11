@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <input type="text" id="nameInput" placeholder="Enter a name">
+  <a href="#" id="submitButton">Submit</a>
+  <div id="nameList"></div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script>
+
+$(document).ready(function() {
+  // Handler for the submit button click
+  $("a").click(function(event) {
+    var newName = $("#nameInput").val();
+    if (newName !== "") {
+      newName = newName.toUpperCase();
+      // Append the new name to the name list container
+      $("#nameList").append("<p>" + "Name:"+ newName + "</p>");
+      // Clear the input field
+      $("#nameInput").val("");
+    }
+  });
+});
+
+var cars=['bmw','audi','benz','nano']
+for (let i=0;i<cars.length;i++){
+  console.log(cars[i])
+  document.write(cars[i]+'<br>')
+}
+
+var cars=['bmw','audi','benz','nano']
+for (car in cars){
+  console.log(car)
+  document.write(car+'<br>')
+  document.write(cars[car]+'<br>')
+}
+
+var cars=['bmw','audi','benz','nano']
+for (car of cars){
+  console.log(car)
+  document.write(car+'<br>')
+}
+
+var fruits = ['apple','banana','orange']
+let i = 0;
+while (i<fruits.length){
+document.write(fruits[i] +'<br>')
+i++
+}
+
+function add(a,b){
+return a+b
+}
+document.write(add(10,20))
+
+
+ class vehicles{
+  constructor(name,year){
+    this.name=name
+    this.year=year
+    }
+  }
+
+  car1=new vehicles('bmw',2010)
+  car2=new vehicles('audi',2000)
+ 
+  document.write(car1.name)
+
+
+  
+  class Car {
+  constructor(name, year) {
+    this.name = name
+    this.year = year
+  }
+}
+
+const myCar1 = new Car("Ford", 2014)
+const myCar2 = new Car("Audi", 2019)
+
+document.write(myCar1.name)
+
+</script>
+</body>
+</html>
